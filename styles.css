@@ -450,16 +450,70 @@ body {
 
 @media (max-width: 768px) {
     .sidebar {
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
+        transform: translateX(0);
+        width: 80px;
+        transition: width 0.3s ease;
+        -webkit-transition: width 0.3s ease;
     }
     
-    .sidebar.active {
-        transform: translateX(0);
+    .sidebar:hover,
+    .sidebar:focus,
+    .sidebar.touch-expanded {
+        width: 280px;
+    }
+    
+    .sidebar .logo h3 {
+        display: none;
+    }
+    
+    .sidebar:hover .logo h3,
+    .sidebar:focus .logo h3,
+    .sidebar.touch-expanded .logo h3 {
+        display: block;
+    }
+    
+    .nav-menu a {
+        position: relative;
+        padding: 12px 10px;
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+    
+    .nav-menu a::before {
+        content: attr(data-icon);
+        font-size: 20px;
+        display: block;
+        margin-bottom: 5px;
+        color: rgba(255,255,255,0.8);
+    }
+    
+    .nav-menu a span {
+        display: none;
+        font-size: 12px;
+    }
+    
+    .sidebar:hover .nav-menu a span,
+    .sidebar:focus .nav-menu a span,
+    .sidebar.touch-expanded .nav-menu a span {
+        display: block;
+    }
+    
+    .submenu {
+        display: none;
+    }
+    
+    .sidebar:hover .submenu,
+    .sidebar:focus .submenu,
+    .sidebar.touch-expanded .submenu {
+        display: block;
     }
     
     .content {
-        margin-left: 0;
+        margin-left: 80px;
+        padding-top: 20px;
+        transition: margin-left 0.3s ease;
+        -webkit-transition: margin-left 0.3s ease;
     }
     
     .analysis-grid {
@@ -469,4 +523,25 @@ body {
     .executive-summary {
         grid-template-columns: 1fr;
     }
+}
+
+.mobile-menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2001;
+    background: #FF5F9E;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(255, 95, 158, 0.3);
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
 }

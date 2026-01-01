@@ -7,32 +7,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="sidebar">
+    <nav class="sidebar" id="sidebar">
         <div class="logo">
             <h3>Auditoría Seguridad Vial</h3>
         </div>
         <ul class="nav-menu">
-            <li><a href="#resumen" data-section="resumen">1. Resumen Ejecutivo</a></li>
-            <li><a href="#introduccion" data-section="introduccion">2. Introducción</a></li>
+            <li><a href="#resumen" data-section="resumen" data-icon="■"><span>1. Resumen Ejecutivo</span></a></li>
+            <li><a href="#introduccion" data-section="introduccion" data-icon="▦"><span>2. Introducción</span></a></li>
             <li class="submenu">
                 <span>2.1 Alcance del Proyecto</span>
                 <span>2.2 Equipo de Análisis</span>
                 <span>2.3 Proceso de Auditoría</span>
             </li>
-            <li><a href="#observaciones-generales" data-section="observaciones-generales">3. Observaciones Generales</a></li>
+            <li><a href="#observaciones-generales" data-section="observaciones-generales" data-icon="⚠"><span>3. Observaciones Generales</span></a></li>
             <li class="submenu">
                 <span>3.1 Problema 1</span>
                 <span>3.2 Problema 2</span>
             </li>
-            <li><a href="#observaciones-especificas" data-section="observaciones-especificas">4. Observaciones Específicas</a></li>
+            <li><a href="#observaciones-especificas" data-section="observaciones-especificas" data-icon="●"><span>4. Observaciones Específicas</span></a></li>
             <li class="submenu">
                 <span>4.1 Gestión de velocidad en pasos peatonales</span>
                 <span>4.2 Parada de colectivos Norte</span>
                 <span>4.3 Giro a la izquierda Sur-Norte</span>
                 <span>4.4 Continuidad bicisenda</span>
             </li>
-            <li><a href="#anexos" data-section="anexos">5. Anexos</a></li>
-            <li><a href="#logbook" data-section="logbook">6. Logbook</a></li>
+            <li><a href="#anexos" data-section="anexos" data-icon="⧉"><span>5. Anexos</span></a></li>
+            <li><a href="#logbook" data-section="logbook" data-icon="✓"><span>6. Logbook</span></a></li>
         </ul>
     </nav>
 
@@ -41,7 +41,7 @@
             <h1>Informe Técnico de Auditoría de Seguridad Vial</h1>
             <div class="report-info">
                 <span>Fecha: <span id="current-date"></span></span>
-                <span>Proyecto: ASV-2024-001</span>
+                <span>Proyecto: ASV-2025-001</span>
             </div>
         </header>
 
@@ -219,39 +219,40 @@
                     <button class="btn-view" onclick="openModal('plans')">Ver Planos</button>
                 </div>
                 <div class="annex-item">
-                    <h3>Anexo C: Normativas</h3>
-                    <p>Referencias normativas aplicables</p>
-                    <button class="btn-view" onclick="openModal('norms')">Ver Documentos</button>
+                    <h3>Descargar Informe en PDF</h3>
+                    <p>Informe técnico completo en formato PDF</p>
+                    <button class="btn-view" onclick="downloadPDF()">Descargar PDF</button>
                 </div>
             </div>
         </section>
 
         <section id="logbook" class="section">
             <h2>6. Logbook</h2>
-            <div class="logbook-container">
+              <div class="logbook-container">
+  
+                 <div class="log-entry">
+                    <div class="log-date">27/12/2025</div>
+                    <div class="log-content">
+                        <h4>Inspección Ocular</h4>
+                        <p>Relevamiento de intersecciones principales. Identificación de puntos críticos.</p>
+                    </div>
+                </div>
                 <div class="log-entry">
-                    <div class="log-date">15/01/2024</div>
+                    <div class="log-date">29/12/2025</div>
                     <div class="log-content">
                         <h4>Inicio de Auditoría</h4>
                         <p>Reunión inicial del equipo técnico. Definición de metodología y cronograma de trabajo.</p>
                     </div>
                 </div>
-                <div class="log-entry">
-                    <div class="log-date">18/01/2024</div>
-                    <div class="log-content">
-                        <h4>Inspección Sector Norte</h4>
-                        <p>Relevamiento de intersecciones principales. Identificación de 5 puntos críticos.</p>
-                    </div>
-                </div>
-                <div class="log-entry">
-                    <div class="log-date">22/01/2024</div>
+                    <div class="log-entry">
+                    <div class="log-date">29/12/2025</div>
                     <div class="log-content">
                         <h4>Análisis de Datos</h4>
                         <p>Procesamiento de información recopilada. Elaboración de matriz de riesgos.</p>
                     </div>
                 </div>
-                <div class="log-entry">
-                    <div class="log-date">25/01/2024</div>
+                    <div class="log-entry">
+                    <div class="log-date">05/01/2026</div>
                     <div class="log-content">
                         <h4>Informe Final</h4>
                         <p>Consolidación de observaciones y recomendaciones. Entrega de informe técnico.</p>

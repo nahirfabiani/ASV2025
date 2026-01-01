@@ -24,6 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (targetSection) {
                 targetSection.classList.add('active');
             }
+            
+            // Cerrar sidebar en móviles después de seleccionar
+            if (window.innerWidth <= 768) {
+                document.getElementById('sidebar').classList.remove('active');
+            }
         });
     });
 });
@@ -73,31 +78,6 @@ function openModal(type) {
                             [Planos de Detalle - Escala 1:200]
                         </div>
                     </div>
-                </div>
-            `;
-            break;
-        case 'norms':
-            content = `
-                <h3>Referencias Normativas</h3>
-                <div style="margin-top: 20px;">
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-radius: 6px; border-left: 4px solid #8E44AD;">
-                            <strong>Manual de Señalización Vial</strong><br>
-                            <span style="color: #666; font-size: 14px;">Ministerio de Transporte - Resolución 1885/2018</span>
-                        </li>
-                        <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-radius: 6px; border-left: 4px solid #8E44AD;">
-                            <strong>Normas de Diseño Geométrico</strong><br>
-                            <span style="color: #666; font-size: 14px;">AASHTO - A Policy on Geometric Design</span>
-                        </li>
-                        <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-radius: 6px; border-left: 4px solid #8E44AD;">
-                            <strong>Guía de Auditorías de Seguridad Vial</strong><br>
-                            <span style="color: #666; font-size: 14px;">AUSTROADS - Road Safety Audit Guidelines</span>
-                        </li>
-                        <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-radius: 6px; border-left: 4px solid #8E44AD;">
-                            <strong>Código de Tránsito Nacional</strong><br>
-                            <span style="color: #666; font-size: 14px;">Ley 24.449 y modificatorias</span>
-                        </li>
-                    </ul>
                 </div>
             `;
             break;
@@ -175,3 +155,43 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener('scroll', animateOnScroll);
+
+// Función para descargar PDF
+function downloadPDF() {
+    // Simular descarga del PDF
+    const link = document.createElement('a');
+    link.href = 'pdf/informe-auditoria-seguridad-vial.pdf';
+    link.download = 'Informe_Auditoria_Seguridad_Vial.pdf';
+    link.click();
+}
+
+// Función para toggle del sidebar en móviles
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('touch-expanded');
+}
+
+// Touch events para dispositivos móviles
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.getElementById('sidebar');
+    let touchStartTime = 0;
+    
+    // Touch events para expandir sidebar
+    sidebar.addEventListener('touchstart', function(e) {
+        touchStartTime = Date.now();
+    });
+    
+    sidebar.addEventListener('touchend', function(e) {
+        const touchDuration = Date.now() - touchStartTime;
+        if (touchDuration < 200) { // Tap rápido
+            this.classList.toggle('touch-expanded');
+        }
+    });
+    
+    // Cerrar sidebar al tocar fuera en móviles
+    document.addEventListener('touchstart', function(e) {
+        if (window.innerWidth <= 768 && !sidebar.contains(e.target)) {
+            sidebar.classList.remove('touch-expanded');
+        }
+    });
+});
