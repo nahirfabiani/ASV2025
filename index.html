@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Técnico - Auditoría de Seguridad Vial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo">
+            <h3>Auditoría Seguridad Vial</h3>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#resumen" data-section="resumen">1. Resumen Ejecutivo</a></li>
+            <li><a href="#introduccion" data-section="introduccion">2. Introducción</a></li>
+            <li class="submenu">
+                <span>2.1 Alcance del Proyecto</span>
+                <span>2.2 Equipo de Análisis</span>
+                <span>2.3 Proceso de Auditoría</span>
+            </li>
+            <li><a href="#observaciones-generales" data-section="observaciones-generales">3. Observaciones Generales</a></li>
+            <li class="submenu">
+                <span>3.1 Problema 1</span>
+                <span>3.2 Problema 2</span>
+            </li>
+            <li><a href="#observaciones-especificas" data-section="observaciones-especificas">4. Observaciones Específicas</a></li>
+            <li class="submenu">
+                <span>4.1 Gestión de velocidad en pasos peatonales</span>
+                <span>4.2 Parada de colectivos Norte</span>
+                <span>4.3 Giro a la izquierda Sur-Norte</span>
+                <span>4.4 Continuidad bicisenda</span>
+            </li>
+            <li><a href="#anexos" data-section="anexos">5. Anexos</a></li>
+            <li><a href="#logbook" data-section="logbook">6. Logbook</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <header class="report-header">
+            <h1>Informe Técnico de Auditoría de Seguridad Vial</h1>
+            <div class="report-info">
+                <span>Fecha: <span id="current-date"></span></span>
+                <span>Proyecto: ASV-2024-001</span>
+            </div>
+        </header>
+
+        <section id="resumen" class="section active">
+            <h2>1. Resumen Ejecutivo</h2>
+            <div class="executive-summary">
+                <div class="summary-card">
+                    <h3>Puntos Críticos Identificados</h3>
+                    <div class="metric">
+                        <span class="number">12</span>
+                        <span class="label">Ubicaciones de Alto Riesgo</span>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <h3>Nivel de Riesgo General</h3>
+                    <div class="risk-indicator high">ALTO</div>
+                </div>
+                <div class="summary-card">
+                    <h3>Recomendaciones Prioritarias</h3>
+                    <div class="metric">
+                        <span class="number">8</span>
+                        <span class="label">Acciones Inmediatas</span>
+                    </div>
+                </div>
+            </div>
+            <p>Este informe presenta los resultados de la auditoría de seguridad vial realizada en el corredor urbano principal, identificando puntos críticos que requieren intervención inmediata para mejorar la seguridad de todos los usuarios de la vía.</p>
+        </section>
+
+        <section id="introduccion" class="section">
+            <h2>2. Introducción</h2>
+            
+            <div class="subsection">
+                <h3>2.1 Alcance del Proyecto</h3>
+                <p>La auditoría abarca un tramo de 5.2 km del corredor principal, incluyendo 8 intersecciones semaforizadas y 15 cruces peatonales.</p>
+                <ul>
+                    <li>Análisis de infraestructura vial existente</li>
+                    <li>Evaluación de señalización horizontal y vertical</li>
+                    <li>Identificación de conflictos vehiculares y peatonales</li>
+                    <li>Propuestas de mejora en seguridad vial</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>2.2 Equipo de Análisis</h3>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <strong>Ing. María González</strong>
+                        <span>Auditor Principal</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Ing. Carlos Rodríguez</strong>
+                        <span>Especialista en Tránsito</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Arq. Ana Martínez</strong>
+                        <span>Diseño Urbano</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>2.3 Proceso de Auditoría de Seguridad Vial</h3>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Revisión Documental</h4>
+                            <p>Análisis de planos y normativas vigentes</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Inspección de Campo</h4>
+                            <p>Relevamiento in-situ de condiciones actuales</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Análisis de Datos</h4>
+                            <p>Evaluación de riesgos y conflictos identificados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="observaciones-generales" class="section">
+            <h2>3. Observaciones Generales</h2>
+            
+            <div class="observation-card critical">
+                <h3>3.1 Problema 1: Señalización Deficiente</h3>
+                <div class="problem-details">
+                    <div class="severity">Severidad: <span class="badge critical">CRÍTICA</span></div>
+                    <p><strong>Descripción:</strong> Se identificó señalización horizontal desgastada en el 60% del corredor analizado, especialmente en zonas de cruce peatonal.</p>
+                    <p><strong>Riesgo:</strong> Incremento significativo en la probabilidad de accidentes por falta de delimitación clara de carriles y cruces.</p>
+                    <p><strong>Recomendación:</strong> Repintado inmediato de demarcación horizontal y instalación de señalización vertical complementaria.</p>
+                </div>
+            </div>
+
+            <div class="observation-card high">
+                <h3>3.2 Problema 2: Iluminación Insuficiente</h3>
+                <div class="problem-details">
+                    <div class="severity">Severidad: <span class="badge high">ALTA</span></div>
+                    <p><strong>Descripción:</strong> Niveles de iluminación por debajo de los estándares mínimos en 4 intersecciones principales durante horario nocturno.</p>
+                    <p><strong>Riesgo:</strong> Reducción de visibilidad que compromete la seguridad de peatones y conductores en horas de baja luminosidad.</p>
+                    <p><strong>Recomendación:</strong> Instalación de luminarias LED adicionales y mejora del sistema de iluminación existente.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="observaciones-especificas" class="section">
+            <h2>4. Observaciones Específicas</h2>
+            <p>Este capítulo detalla las notas y recomendaciones específicas de seguridad vial referidas a puntos críticos identificados en el tramo auditado del acceso a Parque Camet, Av. Félix U. Camet / Ruta 11, en Mar del Plata.</p>
+            
+            <div class="location-analysis">
+                <h3>4.1 Gestión de velocidad en zonas previas a pasos peatonales</h3>
+                <div class="analysis-grid">
+                    <div class="analysis-item">
+                        <h4>Problema</h4>
+                        <p>Se identificó que los vehículos que circulan por la arteria podrían no reducir su velocidad de manera suficiente al aproximarse a los cruces peatonales existentes y proyectados. La geometría actual y la señalización no logran imponer una reducción efectiva de la velocidad, lo que incrementa significativamente el riesgo de atropello y la gravedad potencial de los siniestros, especialmente considerando los flujos peatonales hacia el borde costero y el Parque Camet.</p>
+                    </div>
+                    <div class="analysis-item">
+                        <h4>Nivel de Riesgo</h4>
+                        <div class="risk-meter">
+                            <div class="risk-bar" data-risk="85"></div>
+                            <span>85% - Muy Alto</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendation">
+                    <h4>Recomendación</h4>
+                    <p>Se recomienda implementar resaltos parabólicos en las zonas previas a cada cruce peatonal a lo largo del tramo auditado. Estas medidas de traffic calming físico obligarán a una reducción de velocidad operativa, mejorando la seguridad de los peatones al cruzar. La ubicación y diseño de los resaltos deben cumplir con las normativas locales y garantizar la comodidad y seguridad de todos los usuarios, incluidos los vehículos de transporte público.</p>
+                </div>
+            </div>
+
+            <div class="location-analysis">
+                <h3>4.2 Parada de colectivos Norte</h3>
+                <div class="analysis-grid">
+                    <div class="analysis-item">
+                        <h4>Problema</h4>
+                        <p>La parada de colectivos en ambos sentidos ubicada en el sector norte del tramo analizado, genera conflictos en la operación del tránsito. Los buses detenidos interfieren con el carril de circulación, y las maniobras de ascenso/descenso de pasajeros crean puntos de tensión con los vehículos que intentan adelantar o cambiar de carril. No se cuenta con un análisis cuantitativo actualizado que justifique su ubicación y demanda.</p>
+                    </div>
+                    <div class="analysis-item">
+                        <h4>Nivel de Riesgo</h4>
+                        <div class="risk-meter">
+                            <div class="risk-bar" data-risk="70"></div>
+                            <span>70% - Alto</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendation">
+                    <h4>Recomendación</h4>
+                    <p>Se recomienda realizar un estudio de demanda específico para esta parada, utilizando datos de la modalidad de pago SUBE y conteos de viajes en el tramo. Este análisis determinará si la parada es necesaria en su ubicación actual, si debe reubicarse o si su frecuencia de uso justifica la implementación de una parada formal con refugio.</p>
+                </div>
+            </div>
+
+            <div class="location-analysis">
+                <h3>4.3 Necesidad de giro a la izquierda Sur-Norte</h3>
+                <div class="analysis-grid">
+                    <div class="analysis-item">
+                        <h4>Problema</h4>
+                        <p>Se evidencia una demanda no atendida de giro a la izquierda para los vehículos que circulan en sentido norte y desean acceder a calles o destinos del lado oeste (continente). La configuración actual no permite esta maniobra de forma segura, lo que lleva a los conductores a realizar maniobras improvisadas, riesgosas y a contramano, incrementando el potencial de colisiones frontales y laterales.</p>
+                    </div>
+                    <div class="analysis-item">
+                        <h4>Nivel de Riesgo</h4>
+                        <div class="risk-meter">
+                            <div class="risk-bar" data-risk="75"></div>
+                            <span>75% - Alto</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendation">
+                    <h4>Recomendación</h4>
+                    <p>Aprovechando el espacio ganado de la reconfiguración de carriles recomendada en las observaciones generales, se propone diseñar una dársena de giro a la izquierda en un punto estratégico tal como se puede observar en el proyecto presentado. La solución consiste en que los vehículos que deseen girar deban salir momentáneamente de la vía principal hacia la derecha, para luego incorporarse de forma segura a un carril de espera y completar el giro a la izquierda cuando el semáforo o la señalización lo permitan, sin obstruir el flujo directo.</p>
+                </div>
+            </div>
+
+            <div class="location-analysis">
+                <h3>4.4 Continuidad y seguridad de la bicisenda</h3>
+                <div class="analysis-grid">
+                    <div class="analysis-item">
+                        <h4>Problema</h4>
+                        <p>La bicisenda existente presenta discontinuidades y sectores donde se comparte el espacio con peatones o donde la segregación del tránsito motorizado es insuficiente o está en mal estado. Esto genera conflictos entre ciclistas, peatones y vehículos, aumentando el riesgo de siniestros para los usuarios vulnerables, especialmente en las intersecciones y zonas de alta afluencia peatonal.</p>
+                    </div>
+                    <div class="analysis-item">
+                        <h4>Nivel de Riesgo</h4>
+                        <div class="risk-meter">
+                            <div class="risk-bar" data-risk="65"></div>
+                            <span>65% - Moderado-Alto</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendation">
+                    <h4>Recomendación</h4>
+                    <p>Se recomienda garantizar la continuidad física y visual de la bicisenda a lo largo de todo el tramo auditado. En los sectores de conflicto, se debe implementar una segregación física efectiva (bolardos, separadores o bordillos) entre la ciclovía y la calzada, así como una demarcación clara respecto a las veredas. En las intersecciones, es crucial mejorar la señalización horizontal y vertical, y considerar la implementación de cruces ciclistas demarcados y con prioridad definida.</p>
+                </div>
+            </div>
+
+            <div class="note-section">
+                <p><strong>Nota:</strong> Cada una de estas observaciones debe ser evaluada en detalle por el equipo proyectista para su factibilidad técnica y ajuste al diseño ejecutivo final. Se recomienda incorporar estas recomendaciones en las siguientes etapas del proyecto para garantizar un corredor seguro para todos los modos de transporte.</p>
+            </div>
+        </section>
+
+        <section id="anexos" class="section">
+            <h2>5. Anexos</h2>
+            <div class="annexes-grid">
+                <div class="annex-item">
+                    <h3>Anexo A: Fotografías</h3>
+                    <p>Registro fotográfico de puntos críticos identificados</p>
+                    <button class="btn-view" onclick="openModal('photos')">Ver Galería</button>
+                </div>
+                <div class="annex-item">
+                    <h3>Anexo B: Planos</h3>
+                    <p>Planos técnicos con ubicación de observaciones</p>
+                    <button class="btn-view" onclick="openModal('plans')">Ver Planos</button>
+                </div>
+                <div class="annex-item">
+                    <h3>Anexo C: Normativas</h3>
+                    <p>Referencias normativas aplicables</p>
+                    <button class="btn-view" onclick="openModal('norms')">Ver Documentos</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="logbook" class="section">
+            <h2>6. Logbook</h2>
+            <div class="logbook-container">
+                <div class="log-entry">
+                    <div class="log-date">15/01/2024</div>
+                    <div class="log-content">
+                        <h4>Inicio de Auditoría</h4>
+                        <p>Reunión inicial del equipo técnico. Definición de metodología y cronograma de trabajo.</p>
+                    </div>
+                </div>
+                <div class="log-entry">
+                    <div class="log-date">18/01/2024</div>
+                    <div class="log-content">
+                        <h4>Inspección Sector Norte</h4>
+                        <p>Relevamiento de intersecciones principales. Identificación de 5 puntos críticos.</p>
+                    </div>
+                </div>
+                <div class="log-entry">
+                    <div class="log-date">22/01/2024</div>
+                    <div class="log-content">
+                        <h4>Análisis de Datos</h4>
+                        <p>Procesamiento de información recopilada. Elaboración de matriz de riesgos.</p>
+                    </div>
+                </div>
+                <div class="log-entry">
+                    <div class="log-date">25/01/2024</div>
+                    <div class="log-content">
+                        <h4>Informe Final</h4>
+                        <p>Consolidación de observaciones y recomendaciones. Entrega de informe técnico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
