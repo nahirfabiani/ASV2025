@@ -15,21 +15,21 @@
             <li><a href="#resumen" data-section="resumen" data-icon="■"><span>1. Resumen Ejecutivo</span></a></li>
             <li><a href="#introduccion" data-section="introduccion" data-icon="▦"><span>2. Introducción</span></a></li>
             <li class="submenu">
-                <span>2.1 Alcance del Proyecto</span>
-                <span>2.2 Equipo de Análisis</span>
-                <span>2.3 Proceso de Auditoría</span>
+                <a href="#alcance" class="submenu-link" data-target="alcance">2.1 Alcance del Proyecto</a>
+                <a href="#equipo" class="submenu-link" data-target="equipo">2.2 Equipo de Análisis</a>
+                <a href="#marco" class="submenu-link" data-target="marco">2.3 Marco Conceptual</a>
             </li>
             <li><a href="#observaciones-generales" data-section="observaciones-generales" data-icon="⚠"><span>3. Observaciones Generales</span></a></li>
             <li class="submenu">
-                <span>3.1 Problema 1</span>
-                <span>3.2 Problema 2</span>
+                <a href="#gestion-velocidad" class="submenu-link" data-target="gestion-velocidad">3.1 Gestión de la Velocidad</a>
+                <a href="#problema2" class="submenu-link" data-target="problema2">3.2 Problema 2</a>
             </li>
             <li><a href="#observaciones-especificas" data-section="observaciones-especificas" data-icon="●"><span>4. Observaciones Específicas</span></a></li>
             <li class="submenu">
-                <span>4.1 Gestión de velocidad en pasos peatonales</span>
-                <span>4.2 Parada de colectivos Norte</span>
-                <span>4.3 Giro a la izquierda Sur-Norte</span>
-                <span>4.4 Continuidad bicisenda</span>
+                <a href="#velocidad-peatonales" class="submenu-link" data-target="velocidad-peatonales">4.1 Gestión de velocidad en pasos peatonales</a>
+                <a href="#parada-norte" class="submenu-link" data-target="parada-norte">4.2 Parada de colectivos Norte</a>
+                <a href="#giro-izquierda" class="submenu-link" data-target="giro-izquierda">4.3 Giro a la izquierda Sur-Norte</a>
+                <a href="#bicisenda" class="submenu-link" data-target="bicisenda">4.4 Continuidad bicisenda</a>
             </li>
             <li><a href="#anexos" data-section="anexos" data-icon="⧉"><span>5. Anexos</span></a></li>
             <li><a href="#logbook" data-section="logbook" data-icon="✓"><span>6. Logbook</span></a></li>
@@ -69,57 +69,260 @@
         <section id="introduccion" class="section">
             <h2>2. Introducción</h2>
             
-            <div class="subsection">
+            <div class="subsection" id="alcance">
                 <h3>2.1 Alcance del Proyecto</h3>
-                <p>La auditoría abarca un tramo de 5.2 km del corredor principal, incluyendo 8 intersecciones semaforizadas y 15 cruces peatonales.</p>
-                <ul>
-                    <li>Análisis de infraestructura vial existente</li>
-                    <li>Evaluación de señalización horizontal y vertical</li>
-                    <li>Identificación de conflictos vehiculares y peatonales</li>
-                    <li>Propuestas de mejora en seguridad vial</li>
-                </ul>
-            </div>
-
-            <div class="subsection">
-                <h3>2.2 Equipo de Análisis</h3>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <strong>Ing. María González</strong>
-                        <span>Auditor Principal</span>
+                
+                <div class="project-overview">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <h4>"Cruce Acceso Parque Camet"</h4>
+                            <span class="location">Mar del Plata, Buenos Aires</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">450m</span>
+                                <span class="stat-label">Extensión</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">2023</span>
+                                <span class="stat-label">Año</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="team-member">
-                        <strong>Ing. Carlos Rodríguez</strong>
-                        <span>Especialista en Tránsito</span>
+                    
+                    <div class="project-description">
+                        <p>El proyecto busca aportar condiciones de seguridad vial a la conexión entre el borde costero y el continente, moderando el tránsito en el ingreso costero norte de Mar del Plata.</p>
                     </div>
-                    <div class="team-member">
-                        <strong>Arq. Ana Martínez</strong>
-                        <span>Diseño Urbano</span>
+                    
+                    <div class="route-info">
+                        <div class="route-card">
+                            <div class="route-icon">➤</div>
+                            <div class="route-details">
+                                <h5>Tramo de Análisis</h5>
+                                <p>Av. Félix U. Camet / Ruta 11</p>
+                                <small>Desde Cura Brochero hasta km 509</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="methodology-section">
+                    <h4>Metodología de Análisis</h4>
+                    <div class="methodology-grid">
+                        <div class="method-card">
+                            <div class="method-icon">🔍</div>
+                            <h5>Inspección in situ</h5>
+                            <p>Análisis de infraestructura existente</p>
+                        </div>
+                        <div class="method-card">
+                            <div class="method-icon">📋</div>
+                            <h5>Auditoría del anteproyecto</h5>
+                            <p>Recomendaciones específicas</p>
+                        </div>
+                        <div class="method-card">
+                            <div class="method-icon">⚠️</div>
+                            <h5>Evaluación de conflictos</h5>
+                            <p>Vehiculares y peatonales</p>
+                        </div>
+                        <div class="method-card">
+                            <div class="method-icon">🔄</div>
+                            <h5>Análisis de transición</h5>
+                            <p>Vía local e interurbana</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="subsection">
-                <h3>2.3 Proceso de Auditoría de Seguridad Vial</h3>
-                <div class="process-steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h4>Revisión Documental</h4>
-                            <p>Análisis de planos y normativas vigentes</p>
+            <div class="subsection" id="equipo">
+                <h3>2.2 Equipo de Análisis</h3>
+                <p>Esta Auditoría de Seguridad Vial fue realizada por profesionales especializados en proyectos de seguridad vial de diferentes jurisdicciones del país.</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <strong>Patricio Baldracco</strong>
+                        <span>Municipio de Córdoba, provincia de Córdoba</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Patricio Devoto</strong>
+                        <span>Gobierno de la Ciudad Autónoma de Buenos Aires</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Nahir Fabiani Moya</strong>
+                        <span>Gobierno de la Ciudad Autónoma de Buenos Aires</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Gabriela Funes Balza</strong>
+                        <span>Municipio de General Pueyrredón, provincia de Buenos Aires</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Francisco Sterle</strong>
+                        <span>Gobierno de la Ciudad Autónoma de Buenos Aires</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection" id="marco">
+                <h3>2.3 Marco Conceptual</h3>
+                
+                <div class="concept-section">
+                    <div class="concept-header">
+                        <div class="concept-icon">🛡️</div>
+                        <div class="concept-title">
+                            <h4>Auditorías de Seguridad Vial</h4>
+                            <p class="concept-subtitle">Estrategia preventiva de sistema seguro</p>
                         </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h4>Inspección de Campo</h4>
-                            <p>Relevamiento in-situ de condiciones actuales</p>
+                    
+                    <div class="concept-content">
+                        <div class="concept-card">
+                            <h5>Objetivo Principal</h5>
+                            <p>Método sistemático para revisar diseño de infraestructura vial, identificando y evaluando problemas de seguridad antes de la construcción. Es más fácil y económico corregir problemas en la etapa de diseño que después de construida la obra.</p>
                         </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h4>Análisis de Datos</h4>
-                            <p>Evaluación de riesgos y conflictos identificados</p>
+                </div>
+                
+                <div class="model-section">
+                    <div class="model-header">
+                        <div class="model-icon">📈</div>
+                        <h4>Modelo Power de Nilsson</h4>
+                        <span class="model-year">(2004)</span>
+                    </div>
+                    
+                    <div class="model-content">
+                        <div class="model-explanation">
+                            <p>Relación <strong>exponencial</strong> entre velocidad y siniestros viales</p>
+                        </div>
+                        
+                        <div class="impact-grid">
+                            <div class="impact-card increase">
+                                <div class="impact-arrow">↗️</div>
+                                <div class="impact-data">
+                                    <span class="impact-number">+10%</span>
+                                    <span class="impact-label">Velocidad</span>
+                                </div>
+                                <div class="impact-result">
+                                    <span class="result-number">+46%</span>
+                                    <span class="result-label">Riesgo Fatal</span>
+                                </div>
+                            </div>
+                            
+                            <div class="impact-card decrease">
+                                <div class="impact-arrow">↘️</div>
+                                <div class="impact-data">
+                                    <span class="impact-number">-10%</span>
+                                    <span class="impact-label">Velocidad</span>
+                                </div>
+                                <div class="impact-result">
+                                    <span class="result-number">-34%</span>
+                                    <span class="result-label">Riesgo Fatal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="site-analysis">
+                    <h4>Características del Sitio</h4>
+                    <div class="site-grid">
+                        <div class="site-card">
+                            <div class="site-icon">🛣️</div>
+                            <h5>Transición Vial</h5>
+                            <p>Vía local (3 carriles) → Interurbana (2 carriles)</p>
+                        </div>
+                        <div class="site-card">
+                            <div class="site-icon">🚴</div>
+                            <h5>Bicisenda</h5>
+                            <p>Configuración diversa a lo largo del tramo</p>
+                        </div>
+                        <div class="site-card">
+                            <div class="site-icon">🏖️</div>
+                            <h5>Atractores</h5>
+                            <p>Borde costero y Parque Camet</p>
+                        </div>
+                        <div class="site-card">
+                            <div class="site-icon">🏢</div>
+                            <h5>Ubicación</h5>
+                            <p>Final del ejido urbano</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="data-analysis">
+                    <div class="analysis-tabs">
+                        <div class="tab-header">
+                            <button class="tab-btn active" onclick="showTab('crash')">Siniestralidad</button>
+                            <button class="tab-btn" onclick="showTab('speed')">Velocidad</button>
+                            <button class="tab-btn" onclick="showTab('model')">Modelo Power</button>
+                        </div>
+                        
+                        <div class="tab-content active" id="crash-tab">
+                            <div class="stats-grid">
+                                <div class="stat-box">
+                                    <span class="stat-big">5.9</span>
+                                    <span class="stat-desc">Tasa fallecidos/100k hab.</span>
+                                    <span class="stat-note">(Nacional: 8.3)</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-big">25</span>
+                                    <span class="stat-desc">Siniestros con lesionados</span>
+                                    <span class="stat-note">Tramo específico</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-big">60%</span>
+                                    <span class="stat-desc">En sector de ruta</span>
+                                    <span class="stat-note">Concentración principal</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="speed-tab">
+                            <div class="speed-analysis">
+                                <div class="speed-stat">
+                                    <span class="speed-number">1/3</span>
+                                    <span class="speed-label">Vehículos exceden límite</span>
+                                </div>
+                                <div class="speed-progression">
+                                    <div class="speed-point">
+                                        <span class="speed-value">60-61</span>
+                                        <span class="speed-location">Ciudad</span>
+                                    </div>
+                                    <div class="speed-arrow">→</div>
+                                    <div class="speed-point">
+                                        <span class="speed-value">72</span>
+                                        <span class="speed-location">Intermedio</span>
+                                    </div>
+                                    <div class="speed-arrow">→</div>
+                                    <div class="speed-point">
+                                        <span class="speed-value">76-79</span>
+                                        <span class="speed-location">Ruta</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="model-tab">
+                            <div class="model-example">
+                                <div class="example-header">
+                                    <h5>Ejemplo Práctico: Corredor Norte</h5>
+                                </div>
+                                <div class="calculation">
+                                    <div class="calc-step">
+                                        <span class="calc-label">Velocidad infractores:</span>
+                                        <span class="calc-value">73.6 km/h</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span class="calc-label">Riesgo vs 60 km/h:</span>
+                                        <span class="calc-value highlight">2x mayor</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span class="calc-label">Reducción a 68 km/h:</span>
+                                        <span class="calc-value positive">-26.6% riesgo</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span class="calc-label">Reducción a 50 km/h:</span>
+                                        <span class="calc-value positive">-69.4% riesgo</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -130,11 +333,11 @@
             <h2>3. Observaciones Generales</h2>
             
             <div class="observation-card">
-                <h3>3.1 Problema 1: Señalización Deficiente</h3>
+                <h3 id="gestion-velocidad">3.1 Gestión de la Velocidad</h3>
                 <div class="problem-details">
-                    <p><strong>Descripción:</strong> Se identificó señalización horizontal desgastada en el 60% del corredor analizado, especialmente en zonas de cruce peatonal.</p>
-                    <p><strong>Riesgo:</strong> Incremento significativo en la probabilidad de accidentes por falta de delimitación clara de carriles y cruces.</p>
-                    <p><strong>Recomendación:</strong> Repintado inmediato de demarcación horizontal y instalación de señalización vertical complementaria.</p>
+                    <p><strong>Descripción:</strong> La velocidad actual de operación es de 60 km/h según normativa vigente. Los estudios demuestran que un tercio de los vehículos excede este límite en el trecho a intervenir, representando alto riesgo de muerte para peatones en cruces proyectados y otros usuarios vulnerables como motociclistas.</p>
+                    <p><strong>Riesgo:</strong> Las velocidades excesivas incrementan significativamente el riesgo de fatalidades en atropellos, colisiones laterales entre automotores y siniestros que involucren motociclistas, quienes tienen alta participación en la siniestralidad registrada.</p>
+                    <p><strong>Recomendación:</strong> Establecer límite de 50 km/h sobre la calzada central de Av. Félix U. Camet y 30 km/h sobre calles laterales. Implementar medidas de traffic calming para garantizar cumplimiento de nuevos límites.</p>
                 </div>
             </div>
 
@@ -153,7 +356,7 @@
             <p>Este capítulo detalla las notas y recomendaciones específicas de seguridad vial referidas a puntos críticos identificados en el tramo auditado del acceso a Parque Camet, Av. Félix U. Camet / Ruta 11, en Mar del Plata.</p>
             
             <div class="location-analysis">
-                <h3>4.1 Gestión de velocidad en zonas previas a pasos peatonales</h3>
+                <h3 id="velocidad-peatonales">4.1 Gestión de velocidad en zonas previas a pasos peatonales</h3>
                 <div class="analysis-item">
                     <h4>Problema</h4>
                     <p>Se identificó que los vehículos que circulan por la arteria podrían no reducir su velocidad de manera suficiente al aproximarse a los cruces peatonales existentes y proyectados. La geometría actual y la señalización no logran imponer una reducción efectiva de la velocidad, lo que incrementa significativamente el riesgo de atropello y la gravedad potencial de los siniestros, especialmente considerando los flujos peatonales hacia el borde costero y el Parque Camet.</p>
@@ -165,7 +368,7 @@
             </div>
 
             <div class="location-analysis">
-                <h3>4.2 Parada de colectivos Norte</h3>
+                <h3 id="parada-norte">4.2 Parada de colectivos Norte</h3>
                 <div class="analysis-item">
                     <h4>Problema</h4>
                     <p>La parada de colectivos en ambos sentidos ubicada en el sector norte del tramo analizado, genera conflictos en la operación del tránsito. Los buses detenidos interfieren con el carril de circulación, y las maniobras de ascenso/descenso de pasajeros crean puntos de tensión con los vehículos que intentan adelantar o cambiar de carril. No se cuenta con un análisis cuantitativo actualizado que justifique su ubicación y demanda.</p>
@@ -177,7 +380,7 @@
             </div>
 
             <div class="location-analysis">
-                <h3>4.3 Necesidad de giro a la izquierda Sur-Norte</h3>
+                <h3 id="giro-izquierda">4.3 Necesidad de giro a la izquierda Sur-Norte</h3>
                 <div class="analysis-item">
                     <h4>Problema</h4>
                     <p>Se evidencia una demanda no atendida de giro a la izquierda para los vehículos que circulan en sentido norte y desean acceder a calles o destinos del lado oeste (continente). La configuración actual no permite esta maniobra de forma segura, lo que lleva a los conductores a realizar maniobras improvisadas, riesgosas y a contramano, incrementando el potencial de colisiones frontales y laterales.</p>
@@ -189,7 +392,7 @@
             </div>
 
             <div class="location-analysis">
-                <h3>4.4 Continuidad y seguridad de la bicisenda</h3>
+                <h3 id="bicisenda">4.4 Continuidad y seguridad de la bicisenda</h3>
                 <div class="analysis-item">
                     <h4>Problema</h4>
                     <p>La bicisenda existente presenta discontinuidades y sectores donde se comparte el espacio con peatones o donde la segregación del tránsito motorizado es insuficiente o está en mal estado. Esto genera conflictos entre ciclistas, peatones y vehículos, aumentando el riesgo de siniestros para los usuarios vulnerables, especialmente en las intersecciones y zonas de alta afluencia peatonal.</p>

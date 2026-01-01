@@ -31,6 +31,48 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Navegación por submenu
+    const submenuLinks = document.querySelectorAll('.submenu-link');
+    submenuLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.dataset.target;
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                // Primero asegurar que la sección padre esté activa
+                const parentSection = targetElement.closest('.section');
+                if (parentSection) {
+                    // Ocultar todas las secciones
+                    sections.forEach(section => section.classList.remove('active'));
+                    // Mostrar la sección padre
+                    parentSection.classList.add('active');
+                    
+                    // Actualizar navegación principal
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    const parentNavLink = document.querySelector(`[data-section="${parentSection.id}"]`);
+                    if (parentNavLink) {
+                        parentNavLink.classList.add('active');
+                    }
+                }
+                
+                // Scroll suave al elemento
+                setTimeout(() => {
+                    targetElement.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                }, 100);
+                
+                // Cerrar sidebar en móviles
+                if (window.innerWidth <= 768) {
+                    document.getElementById('sidebar').classList.remove('touch-expanded');
+                }
+            }
+        });
+    });
 });
 
 // Funciones para modal
@@ -165,26 +207,55 @@ function downloadPDF() {
     link.click();
 }
 
-// Función para toggle del sidebar en móviles
-function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('touch-expanded');
+// Función para mostrar tabs
+function showTab(tabName) {
+    // Ocultar todos los tabs
+    document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // Remover clase active de todos los botones
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Mostrar el tab seleccionado
+    document.getElementById(tabName + '-tab').classList.add('active');
+    
+    // Activar el botón correspondiente
+    event.target.classList.add('active');
 }
 
 // Touch events para dispositivos móviles
 document.addEventListener('DOMContentLoaded', function() {
     const sidebar = document.getElementById('sidebar');
+    const navLinks = document.querySelectorAll('.nav-menu a[data-section]');
     let touchStartTime = 0;
     
-    // Touch events para expandir sidebar
+    // Prevenir expansión del sidebar al hacer click en enlaces
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+        
+        link.addEventListener('touchend', function(e) {
+            e.stopPropagation();
+        });
+    });
+    
+    // Touch events para expandir sidebar (solo en área vacía)
     sidebar.addEventListener('touchstart', function(e) {
-        touchStartTime = Date.now();
+        if (!e.target.closest('.nav-menu a')) {
+            touchStartTime = Date.now();
+        }
     });
     
     sidebar.addEventListener('touchend', function(e) {
-        const touchDuration = Date.now() - touchStartTime;
-        if (touchDuration < 200) { // Tap rápido
-            this.classList.toggle('touch-expanded');
+        if (!e.target.closest('.nav-menu a')) {
+            const touchDuration = Date.now() - touchStartTime;
+            if (touchDuration < 200) {
+                this.classList.toggle('touch-expanded');
+            }
         }
     });
     
