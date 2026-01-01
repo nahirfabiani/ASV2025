@@ -23,52 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.getElementById(this.dataset.section);
             if (targetSection) {
                 targetSection.classList.add('active');
-                
-                // Animar barras de riesgo si están en la sección
-                animateRiskBars();
-            }
-        });
-    });
-    
-    // Animar barras de riesgo
-    function animateRiskBars() {
-        const riskBars = document.querySelectorAll('.risk-bar');
-        riskBars.forEach(bar => {
-            const riskValue = bar.dataset.risk;
-            if (riskValue) {
-                setTimeout(() => {
-                    bar.style.setProperty('--risk-width', riskValue + '%');
-                }, 300);
-            }
-        });
-    }
-    
-    // Inicializar barras de riesgo en la primera carga
-    setTimeout(animateRiskBars, 500);
-    
-    // Navegación por submenu
-    const submenuItems = document.querySelectorAll('.submenu span');
-    submenuItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Encontrar la sección padre
-            const parentSection = this.closest('li').previousElementSibling?.querySelector('a');
-            if (parentSection) {
-                parentSection.click();
-                
-                // Scroll suave al subsection correspondiente
-                setTimeout(() => {
-                    const subsectionText = this.textContent.trim();
-                    const subsections = document.querySelectorAll('.subsection h3, .observation-card h3, .location-analysis h3');
-                    
-                    subsections.forEach(subsection => {
-                        if (subsection.textContent.includes(subsectionText.split(' ')[1])) {
-                            subsection.scrollIntoView({ 
-                                behavior: 'smooth', 
-                                block: 'start' 
-                            });
-                        }
-                    });
-                }, 100);
             }
         });
     });
@@ -127,19 +81,19 @@ function openModal(type) {
                 <h3>Referencias Normativas</h3>
                 <div style="margin-top: 20px;">
                     <ul style="list-style: none; padding: 0;">
-                        <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-radius: 6px; border-left: 4px solid #F39C12;">
+                        <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-radius: 6px; border-left: 4px solid #8E44AD;">
                             <strong>Manual de Señalización Vial</strong><br>
                             <span style="color: #666; font-size: 14px;">Ministerio de Transporte - Resolución 1885/2018</span>
                         </li>
-                        <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-radius: 6px; border-left: 4px solid #F39C12;">
+                        <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-radius: 6px; border-left: 4px solid #8E44AD;">
                             <strong>Normas de Diseño Geométrico</strong><br>
                             <span style="color: #666; font-size: 14px;">AASHTO - A Policy on Geometric Design</span>
                         </li>
-                        <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-radius: 6px; border-left: 4px solid #F39C12;">
+                        <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-radius: 6px; border-left: 4px solid #8E44AD;">
                             <strong>Guía de Auditorías de Seguridad Vial</strong><br>
                             <span style="color: #666; font-size: 14px;">AUSTROADS - Road Safety Audit Guidelines</span>
                         </li>
-                        <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-radius: 6px; border-left: 4px solid #F39C12;">
+                        <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-radius: 6px; border-left: 4px solid #8E44AD;">
                             <strong>Código de Tránsito Nacional</strong><br>
                             <span style="color: #666; font-size: 14px;">Ley 24.449 y modificatorias</span>
                         </li>
