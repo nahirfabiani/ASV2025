@@ -1391,13 +1391,6 @@ body {
         transform: translateX(0);
     }
     
-    .sidebar.open .logo h3,
-    .sidebar.open .nav-menu a span,
-    .sidebar.open .submenu {
-        opacity: 1;
-        visibility: visible;
-    }
-    
     .content {
         margin-left: 0;
     }
@@ -1411,8 +1404,46 @@ body {
     .sidebar .logo h3,
     .sidebar .nav-menu a span,
     .sidebar .submenu {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
+        display: none;
+    }
+    
+    .sidebar.open .logo h3,
+    .sidebar.open .nav-menu a span {
+        display: block !important;
+        color: white !important;
+        font-weight: bold !important;
+        font-size: 16px !important;
+    }
+    
+    .sidebar.open .submenu {
+        display: block !important;
+    }
+    
+    .sidebar.open .submenu a {
+        display: block !important;
+        color: white !important;
+        font-size: 12px !important;
+    }
+}
+/* Responsive font sizes for sidebar */
+@media (max-width: 768px) {
+    .sidebar.open .logo h3,
+    .sidebar.open .nav-menu a span {
+        font-size: 14px !important;
+    }
+    
+    .sidebar.open .submenu a {
+        font-size: 11px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar.open .logo h3,
+    .sidebar.open .nav-menu a span {
+        font-size: 13px !important;
+    }
+    
+    .sidebar.open .submenu a {
+        font-size: 10px !important;
     }
 }
