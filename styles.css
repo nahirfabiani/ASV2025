@@ -1391,11 +1391,28 @@ body {
         transform: translateX(0);
     }
     
+    .sidebar.open .logo h3,
+    .sidebar.open .nav-menu a span,
+    .sidebar.open .submenu {
+        opacity: 1;
+        visibility: visible;
+    }
+    
     .content {
         margin-left: 0;
     }
     
     .report-header {
         padding-left: 80px;
+    }
+}
+/* Hide sidebar text by default in mobile */
+@media (max-width: 1024px) {
+    .sidebar .logo h3,
+    .sidebar .nav-menu a span,
+    .sidebar .submenu {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
     }
 }
