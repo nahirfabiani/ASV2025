@@ -1,3 +1,36 @@
+/* Estilos base del informe */
+:root{
+    --max-content-width:1000px;
+}
+body{
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    color:#222;
+    margin:0;
+}
+
+/* Encabezados de sección coherentes */
+.section h2{
+    font-size:1.75rem;
+    margin:0 0 1rem 0;
+    font-weight:600;
+    color:inherit;
+}
+
+/* Contenedores de contenido para secciones largas */
+.section .diagnostico-content,
+.section .conclusiones-content,
+.section .executive-summary,
+.section .project-description{
+    max-width:var(--max-content-width);
+    margin:0 auto 1.5rem auto;
+    line-height:1.6;
+}
+
+/* Ajustes puntuales para formato de listas y tarjetas */
+ul{margin-left:1.25rem}
+h3,h4,h5{margin:0.5rem 0}
+
+/* Fin de styles.css */
 * {
     margin: 0;
     padding: 0;
@@ -976,6 +1009,376 @@ body {
 .calc-value.positive {
     color: #6DBE45;
     font-weight: 700;
+}
+/* ===== ESTILOS PARA SECCIÓN DIAGNÓSTICO ===== */
+
+.diagnostico-tabla {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafb 100%);
+    padding: 40px;
+    margin: 0 auto 35px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(0,125,188,0.08);
+    border: 1px solid #e8f0f5;
+    max-width: var(--max-content-width);
+    transition: all 0.3s ease;
+}
+
+.diagnostico-tabla:hover {
+    box-shadow: 0 6px 30px rgba(0,125,188,0.12);
+    transform: translateY(-2px);
+}
+
+.diagnostico-tabla h3 {
+    color: #2C3E50;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #6DBE45;
+    padding-bottom: 15px;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+}
+
+.tabla-contexto {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border-left: 4px solid #007DBC;
+    box-shadow: 0 2px 15px rgba(0,125,188,0.1);
+}
+
+.tabla-contexto h4 {
+    color: #007DBC;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.tabla-contexto p {
+    color: #333333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.tabla-contexto strong {
+    color: #2C3E50;
+    font-weight: 600;
+}
+
+.hallazgos-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0 35px 0;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.hallazgos-tabla caption {
+    caption-side: top;
+    text-align: left;
+    padding: 0 0 20px 0;
+    margin-bottom: 0;
+}
+
+.hallazgos-tabla caption h4 {
+    color: #007DBC;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0;
+}
+
+.hallazgos-tabla thead {
+    background: linear-gradient(135deg, #2C3E50 0%, #1a252f 100%);
+    color: white;
+}
+
+.hallazgos-tabla th {
+    padding: 18px 20px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 15px;
+    border-bottom: 2px solid #007DBC;
+}
+
+.hallazgos-tabla tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.hallazgos-tabla tbody tr:hover {
+    background-color: #f8fafb;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 10px rgba(0,125,188,0.1);
+}
+
+.hallazgos-tabla td {
+    padding: 20px;
+    vertical-align: top;
+    color: #333333;
+    line-height: 1.5;
+}
+
+.hallazgos-tabla td:first-child {
+    font-weight: 600;
+    color: #2C3E50;
+    width: 25%;
+    background: #f8f9fa;
+    border-right: 1px solid #e0e6ed;
+}
+
+.hallazgos-tabla td:nth-child(2) {
+    width: 30%;
+    color: #555555;
+    font-size: 15px;
+    border-right: 1px solid #e0e6ed;
+}
+
+.hallazgos-tabla td:nth-child(3) {
+    width: 45%;
+    color: #333333;
+}
+
+.hallazgos-tabla ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.hallazgos-tabla li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.hallazgos-tabla li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #F39C12;
+    font-size: 18px;
+}
+
+.hallazgos-tabla li strong {
+    color: #2C3E50;
+    font-weight: 600;
+}
+
+.conclusion-diagnostico {
+    background: linear-gradient(135deg, #fff8e1 0%, #fef7e0 100%);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 25px;
+    border-left: 4px solid #F39C12;
+    box-shadow: 0 2px 15px rgba(243,156,18,0.15);
+}
+
+.conclusion-diagnostico h4 {
+    color: #F39C12;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.conclusion-diagnostico p {
+    color: #5a4b2e;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.conclusion-diagnostico strong {
+    color: #d68910;
+    font-weight: 700;
+}
+
+/* ===== ESTILOS PARA SECCIÓN CONSIDERACIONES FINALES ===== */
+
+.conclusiones-finales {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafb 100%);
+    padding: 40px;
+    margin: 0 auto 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(44,62,80,0.1);
+    border: 1px solid #e8f0f5;
+    max-width: var(--max-content-width);
+    transition: all 0.3s ease;
+}
+
+.conclusiones-finales:hover {
+    box-shadow: 0 6px 30px rgba(44,62,80,0.15);
+    transform: translateY(-2px);
+}
+
+.conclusiones-finales h3 {
+    color: #2C3E50;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #6DBE45;
+    padding-bottom: 15px;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+}
+
+.conclusiones-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.conclusiones-content p {
+    color: #333333;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 15px 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid #e0e6ed;
+    transition: all 0.3s ease;
+}
+
+.conclusiones-content p:hover {
+    background: #f8fafb;
+    border-left-color: #007DBC;
+    transform: translateX(5px);
+}
+
+.conclusiones-content strong {
+    color: #2C3E50;
+    font-weight: 700;
+}
+
+.conclusiones-content p:first-child {
+    border-left-color: #F39C12;
+    background: linear-gradient(135deg, #fef7e0 0%, #fff8e1 100%);
+}
+
+.conclusiones-content p:first-child strong {
+    color: #d68910;
+}
+
+.conclusiones-content p:last-child {
+    border-left-color: #6DBE45;
+    background: linear-gradient(135deg, #f0f9f0 0%, #f8fcf8 100%);
+    font-weight: 500;
+}
+
+.conclusiones-content p:last-child strong {
+    color: #45a049;
+}
+
+/* ===== RESPONSIVE PARA DIAGNÓSTICO Y CONCLUSIONES ===== */
+
+@media (max-width: 1024px) {
+    .diagnostico-tabla,
+    .conclusiones-finales {
+        padding: 35px;
+        margin: 0 20px 30px 20px;
+    }
+    
+    .hallazgos-tabla td {
+        padding: 15px;
+    }
+    
+    .tabla-contexto,
+    .conclusion-diagnostico {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .diagnostico-tabla,
+    .conclusiones-finales {
+        padding: 25px 20px;
+        margin: 0 15px 25px 15px;
+    }
+    
+    .diagnostico-tabla h3,
+    .conclusiones-finales h3 {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    
+    .hallazgos-tabla {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .hallazgos-tabla th,
+    .hallazgos-tabla td {
+        min-width: 200px;
+        white-space: nowrap;
+    }
+    
+    .tabla-contexto h4,
+    .conclusion-diagnostico h4 {
+        font-size: 17px;
+    }
+    
+    .tabla-contexto p,
+    .conclusion-diagnostico p,
+    .conclusiones-content p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .diagnostico-tabla,
+    .conclusiones-finales {
+        padding: 20px 15px;
+        margin: 0 10px 20px 10px;
+    }
+    
+    .diagnostico-tabla h3,
+    .conclusiones-finales h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .tabla-contexto,
+    .conclusion-diagnostico {
+        padding: 15px;
+    }
+    
+    .hallazgos-tabla th,
+    .hallazgos-tabla td {
+        min-width: 180px;
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .hallazgos-tabla li {
+        font-size: 14px;
+    }
+    
+    .conclusiones-content p {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+}
+
+@media print {
+    .diagnostico-tabla,
+    .conclusiones-finales {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+    }
+    
+    .hallazgos-tabla {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .tabla-contexto,
+    .conclusion-diagnostico {
+        box-shadow: none;
+        border: 1px solid #eee;
+    }
 }
 
 /* ===== RESPONSIVE DESIGN ===== */

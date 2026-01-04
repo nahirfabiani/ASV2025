@@ -11,6 +11,9 @@
 - Formatos recomendados: JPG, PNG, WEBP
 - Organice por ubicación o tipo de problema
 
+### /documentos
+- Coloque aquí los documentos complementarios
+
 ### /pdf
 - Coloque aquí el informe técnico completo en formato PDF
 - Archivo principal: informe-auditoria-seguridad-vial.pdf
