@@ -94,7 +94,7 @@ function openModal(type) {
                         Foto 2: Señalización deficiente
                     </div>
                     <div style="background: #f0f0f0; height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #666;">
-                        Foto 3: Iluminación nocturna
+                        Foto 3: Ciclovía compartida
                     </div>
                     <div style="background: #f0f0f0; height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #666;">
                         Foto 4: Estado del pavimento
@@ -110,7 +110,7 @@ function openModal(type) {
                         <h4>Plano General del Corredor</h4>
                         <p>Ubicación de puntos críticos identificados en la auditoría</p>
                         <div style="background: #e9ecef; height: 200px; margin-top: 10px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #666;">
-                            [Plano General - Escala 1:1000]
+                            smu ACCESO CAMET v05-1
                         </div>
                     </div>
                     <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">

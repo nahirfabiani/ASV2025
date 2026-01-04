@@ -1778,6 +1778,7 @@ body {
     display: block;
 }
 
+
 /* Tablet y Mobile - Hamburger Menu */
 @media (max-width: 1024px) {
     .hamburger-menu {
